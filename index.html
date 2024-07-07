@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <style>
+        .card {
+            border: 1px solid black;
+            border-radius: 20px;
+            padding: 10px;
+        }
+        .card-img {
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
+        .card-heading {
+            text-align: center;
+        }
+        .quantity-container {
+            display: flex;
+            justify-content: space-around;
+        }
+        .button{
+            height: 40px;
+            width: 40px;
+            font-size: medium;
+        }
+        .button:hover{
+            height: 41px;
+            width: 41px;
+        }
+        .quantity{
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="./img/teddy.jpg" alt="" height="70px" class="card-img">
+        <h1 class="card-heading">Teddy</h1>
+
+        <div class="quantity-container">
+            <button type="button" class="button" onclick="decrement()">
+                -
+            </button>
+            <span id="quantity" class="quantity">1</span>
+            <button type="button" class="button" onclick="increment()">
+                +
+            </button>
+        </div>
+    </div>
+    <script>
+        const quantityElement = document.getElementById("quantity");
+        let quantity = parseInt(quantityElement.innerText);
+
+        function increment() {
+            quantityElement.innerText = ++quantity;
+        }
+
+        function decrement() {
+            quantityElement.innerText = --quantity;
+        }
+    </script>
+</body>
+</html>
