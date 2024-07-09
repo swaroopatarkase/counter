@@ -58,8 +58,12 @@
         }
 
         function decrement() {
-            quantityElement.innerText = --quantity;
+        quantityElement.innerText = --quantity;
+        if(quantityElement.innerText<0)
+        {
+        document.write("Quantity never be negative...")
         }
+    }
     </script>
 </body>
 </html>
